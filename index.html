@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShop</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Tailwind Style -->
+    <link rel="stylesheet" href="output.css">
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "ff4d8f8f-349e-4031-b2d2-c8548306f3c4",
+            apiHost: "http://localhost:3000",
+        })
+    </script>
+</head>
+<!-- promotion (Announcement)-->
+
+<body class="bg-indigo-600">
+    <div class="bg-red-600 px-4 py-3 text-white">
+        <p class="text-center text-sm font-inter">
+            DISKON HINGGA 60% DI SKY STORE
+            <a href="#" class="inline-block underline">CHECKOUT SEKARANG!</a>
+        </p>
+    </div>
+    <!-- end promotion -->
+
+    <!-- Navbar (Header)-->
+    <header class="bg-gray-50">
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div class="text-center sm:text-left">
+                    <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">WELCOME TO SKYSTORE!</h1>
+
+                    <p class="mt-1.5 text-sm text-gray-500">Belanja Termurah Hanya Di SKYSTORE! 🎉</p>
+                </div>
+
+                <div class="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
+                    <a href="caraBelanja.html" class="button1">
+                        Cara Belanja
+                    </a>
+                    </button>
+                    <a href="https://wa.me/62803512345?text?=Hallo min mau nanya" class="button2">
+                        Chat Admin
+                        <svg viewBox="0 0 48 48" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                                fill="#fff"></path>
+                            <path
+                                d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                                fill="#fff"></path>
+                            <path
+                                d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                                fill="#cfd8dc"></path>
+                            <path
+                                d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                                fill="#40c351"></path>
+                            <path clip-rule="evenodd"
+                                d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                                fill-rule="evenodd" fill="#fff"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Navbar -->
+
+    <!-- Call to action (CTAs) -->
+    <section class="bg-gray-900">
+        <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+            <div class="mx-auto max-w-lg text-center">
+                <h2 class="text-2xl font-bold text-gray-50 md:text-3xl">
+                    SKYSTORE SHOPPING Pasti murah SE-INDONESIA
+                </h2>
+
+                <p class="hidden text-indigo-500 sm:mt-4 sm:block">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor officia blanditiis
+                    repellat in, vero, aperiam porro ipsum laboriosam consequuntur exercitationem incidunt
+                    tempora nisi?
+                </p>
+            </div>
+
+            <div class="mx-auto mt-8 max-w-xl">
+                <form action="#" class="sm:flex sm:gap-4">
+                    <div class="sm:flex-1">
+                        <input type="text" placeholder="Canon Camera..."
+                            class="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-rose-400" />
+                    </div>
+
+                    <button type="submit"
+                        class="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-rose-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-rose-400 sm:mt-0 sm:w-auto">
+                        <span class="text-sm font-medium"> Cari Barang </span>
+
+                        <svg class="size-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Call to action(CTAs) -->
+
+    <!-- Product list (Product Card ) -->
+    <div class="container grid grid-cols-4 gap-4 mx-auto py-8">
+        <a href="https://wa.me/62803512345?text=Hallo min saya mau beli Camera Canon EOS"
+            class="group relative block overflow-hidden">
+            <button
+                class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                <span class="sr-only">Wishlist</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+            </button>
+
+            <img src="/src/camera/Canon EOS 1500D 24.1 Digital SLR Camera (Black) with EF S18-55 is II Lens 2.jpg"
+                alt="" class="h-64 w-auto object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+                <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">Canon EOS</h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">Rp 3.700.000</p>
+
+                <form class="mt-4">
+
+                </form>
+
+                <button class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </a>
+        <a href="https://wa.me/62803512345?text=Hallo min saya mau beli Camera Fujifilm Instax"
+            class="group relative block overflow-hidden">
+            <button
+                class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                <span class="sr-only">Wishlist</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+            </button>
+
+            <img src="/src/camera/Fujifilm Instax Mini 9 Instant Camera (Cobalt Blue) 1.jpg" alt=""
+                class="h-64 w-auto object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+                <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">Fujifilm Instax</h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">Rp 9.730.000</p>
+
+                <form class="mt-4">
+
+                </form>
+
+                <button class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </a>
+        <a href="https://wa.me/62803512345?text=Hallo min saya mau beli Camera Nikon D780"
+            class="group relative block overflow-hidden">
+            <button
+                class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                <span class="sr-only">Wishlist</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+            </button>
+
+            <img src="/src/camera/Nikon D780 DSLR Body with 24-120mm VR Lens, 3X Optical Zoom, Black 1.jpg" alt=""
+                class="h-64 w-auto object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+                <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">Nikon D780</h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">Rp 4.700.000</p>
+
+                <form class="mt-4">
+
+                </form>
+
+                <button class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </a>
+        <a href="https://wa.me/62803512345?text=Hallo min saya mau beli Camera Canon EOS 200D"
+            class="group relative block overflow-hidden">
+            <button
+                class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                <span class="sr-only">Wishlist</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+            </button>
+
+            <img src="/src/camera/Canon EOS 200D II 24.1MP Digital SLR Camera + EF-S 18-55mm f4 is STM Lens (Black) 1.jpg"
+                alt="" class="h-64 w-auto object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+                <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">Canon EOS 200D</h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">Rp 1.700.000</p>
+
+                <form class="mt-4">
+
+                </form>
+
+                <button class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </a>
+        <a href="https://wa.me/62803512345?text=Hallo min saya mau beli Camera Canon EOS"
+            class="group relative block overflow-hidden">
+            <button
+                class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                <span class="sr-only">Wishlist</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+            </button>
+
+            <img src="/src/camera/Canon EOS 1500D 24.1 Digital SLR Camera (Black) with EF S18-55 is II Lens 2.jpg"
+                alt="" class="h-64 w-auto object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+                <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">Canon EOS</h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">Rp 3.700.000</p>
+
+                <form class="mt-4">
+
+                </form>
+
+                <button class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </a>
+        <a href="https://wa.me/62803512345?text=Hallo min saya mau beli Camera Fujifilm Instax"
+            class="group relative block overflow-hidden">
+            <button
+                class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                <span class="sr-only">Wishlist</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+            </button>
+
+            <img src="/src/camera/Fujifilm Instax Mini 9 Instant Camera (Cobalt Blue) 1.jpg" alt=""
+                class="h-64 w-auto object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+                <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">Fujifilm Instax</h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">Rp 9.730.000</p>
+
+                <form class="mt-4">
+
+                </form>
+
+                <button class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </a>
+        <a href="https://wa.me/62803512345?text=Hallo min saya mau beli Camera Nikon D780"
+            class="group relative block overflow-hidden">
+            <button
+                class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                <span class="sr-only">Wishlist</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+            </button>
+
+            <img src="/src/camera/Nikon D780 DSLR Body with 24-120mm VR Lens, 3X Optical Zoom, Black 1.jpg" alt=""
+                class="h-64 w-auto object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+                <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">Nikon D780</h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">Rp 4.700.000</p>
+
+                <form class="mt-4">
+
+                </form>
+
+                <button class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </a>
+        <a href="https://wa.me/62803512345?text=Hallo min saya mau beli Camera Canon EOS 200D"
+            class="group relative block overflow-hidden">
+            <button
+                class="absolute end-4 top-4 z-10 rounded-full bg-white p-1.5 text-gray-900 transition hover:text-gray-900/75">
+                <span class="sr-only">Wishlist</span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-4 w-4">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+            </button>
+
+            <img src="/src/camera/Canon EOS 200D II 24.1MP Digital SLR Camera + EF-S 18-55mm f4 is STM Lens (Black) 1.jpg"
+                alt="" class="h-64 w-auto object-cover transition duration-500 group-hover:scale-105 sm:h-72" />
+
+            <div class="relative border border-gray-100 bg-white p-6">
+                <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"> New </span>
+
+                <h3 class="mt-4 text-lg font-medium text-gray-900">Canon EOS 200D</h3>
+
+                <p class="mt-1.5 text-sm text-gray-700">Rp 1.700.000</p>
+
+                <form class="mt-4">
+
+                </form>
+
+                <button class="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                    Add to Cart
+                </button>
+            </div>
+        </a>
+    </div>
+    <!-- End Product list -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-950">
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div class="flex justify-center text-rose-600 sm:justify-start font-bold">
+                    SKYSTORE
+                </div>
+                <p class="mt-4 text-center text-sm text-rose-500 lg:mt-0 lg:text-right">
+                    Copyright &copy; 2024. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+</body>
+
+</html>
